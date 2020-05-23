@@ -60,10 +60,8 @@ CLASS : Delete
 URL: api/user/delete
 
 METHOD : Delete
-request
-{
-  "email":"xx@gmail.com" 
-}
+request :?email:"xx@gmail.com" 
+
 response
 {
   "succeed":"true" 
@@ -83,10 +81,8 @@ CLASS : Query
 URL: api/user/query
 
 METHOD : Get
-request
-{
-  "username":"%" 
-}
+request:?username=%
+
 response
   {"users":[
       {"email":"yeet@gmail.com","username":"Kevin"},

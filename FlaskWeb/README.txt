@@ -85,19 +85,24 @@ URL: api/user/query
 METHOD : Get
 request
 {
-  "username":"xx" 
+  "username":"%" 
 }
 response
-{
-  "username":"xx"
-  "email":"xx@gmail.com"
-}
+  {"users":[
+      {"email":"yeet@gmail.com","username":"Kevin"},
+      {"email":"ss@gmail.com","username":"ss"},
+      {"email":"kevin.wangsentbon@gmail.com","username":"FruitsnVeggies"},
+      {"email":"a@gmail.com","username":"jijia"}
+      ]
+  }
 
 
 sample request:
-	curl -X GET http://127.0.0.1:5000/api/user/query?username=ss
+	curl -X GET http://127.0.0.1:5000/api/user/query?username=%
 sample response:
-	{"users":[{"email":"ss@gmail.com","username":"ss"}]}
+	{"users":[{"email":"yeet@gmail.com","username":"Kevin"},{"email":"ss@gmail.com",
+"username":"ss"},{"email":"kevin.wangsentbon@gmail.com","username":"FruitsnVeggi
+es"},{"email":"a@gmail.com","username":"jijia"}]}
 
 
 

@@ -47,7 +47,7 @@ class UserDelete(Resource):
 class UserQuery(Resource):
    def get(self):
       args = request.args
-      users = User.query.filter_by(username=args["username"])
+      users = User.query.filter(User.username.like(args["username"])).all()
       users_dict = []
       for u in users:
         user_dict = {

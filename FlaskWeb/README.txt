@@ -1,6 +1,12 @@
 How to user web functions
 
 
+INSTALLS:
+pip install flask
+pip install flask-sqlalchemy
+pip install flask-bcrypt
+pip install flask-login
+pip install flask-restful
 
 
 CLASS : Login 
@@ -18,11 +24,11 @@ response
   "succeed":"false" 
 }
 
-
 sample request:
 	curl -X POST -H "Content-Type:application/json" -d "{\"username\":\"ss\",\"password\":\"a5812381\",\"email\":\"ss@gmail.com\"}" http://127.0.0.1:5000/api/user/login
 sample response:
 	{"succeed":"false"}
+
 
 
 
@@ -44,12 +50,11 @@ response
   "succeed":"true" 
 }
 
-
-
 sample request:
 	curl -X PUT -H "Content-Type:application/json" -d "{\"username\":\"Daniel\",\"password\":\"a5812381\",\"email\":\"daniel@gmail.com\"}" http://127.0.0.1:5000/api/user/register
 sample response:
 	{"succeed":"true"}
+
 
 
 
@@ -67,11 +72,11 @@ response
   "succeed":"true" 
 }
 
-
 sample request:
 	curl -X DELETE http://127.0.0.1:5000/api/user/delete?email=daniel@gmail.com
 sample response:
 	{"succeed":"true"}
+
 
 
 
@@ -91,7 +96,6 @@ response
       {"email":"a@gmail.com","username":"jijia"}
       ]
   }
-
 
 sample request:
 	curl -X GET http://127.0.0.1:5000/api/user/query?username=%

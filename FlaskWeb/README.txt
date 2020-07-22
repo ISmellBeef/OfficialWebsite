@@ -8,6 +8,7 @@ pip install flask-bcrypt
 pip install flask-login
 pip install flask-restful
 pip install Flask-WTF // kevin you forgot this
+pip install email_validator // also this
 
 
 CLASS : Login 

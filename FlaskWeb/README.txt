@@ -7,6 +7,7 @@ pip install flask-sqlalchemy
 pip install flask-bcrypt
 pip install flask-login
 pip install flask-restful
+pip install Flask-WTF // kevin you forgot this
 
 
 CLASS : Login 
